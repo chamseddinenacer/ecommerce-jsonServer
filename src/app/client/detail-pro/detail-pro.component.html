@@ -1,0 +1,122 @@
+<!-- <app-header></app-header> -->
+  <section class="py-5"  *ngIf="productData">
+
+    <!-- <p *ngIf="!pasProduit" ></p> -->
+
+    <!-- <div *ngIf="!pasProduit" class="alert alert-warning" role="alert">
+      product is not existe in stock
+    </div> -->
+
+
+    <div class="container">
+      <div class="row gx-5">
+        <aside class="col-lg-6">
+          <div class="border rounded-4 mb-3 d-flex justify-content-center">
+            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
+              <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="{{productData.image}}" />
+            </a>
+          </div>
+         
+         
+        </aside>
+        <main class="col-lg-6">
+         
+          <div class="ps-lg-3">
+            <h4 class="title text-dark">
+             
+              <div *ngIf="addtocartt" class="alert alert-success" role="alert">
+                <B  > product added successfully in cart</B>
+              </div>
+
+
+              <div *ngIf="pasProduit" class="alert alert-warning" role="alert">
+                <B style="color: red;"> product is not existe in stock</B>
+              </div>
+
+
+              <div *ngIf="pasProduitNEG" class="alert alert-warning" role="alert">
+                <B style="color: red;">The Quantity you added is not available in stock </B>
+              </div>
+
+
+              {{productData.name}}  
+            </h4>
+            <div class="d-flex flex-row my-3">
+              <div class="text-warning mb-1 me-2">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="ms-1">
+                  4.5
+                </span>
+              </div>
+              
+              <span class="text-muted">
+                <i class="fas fa-shopping-basket fa-sm mx-1"></i> <b>{{productData.stock}} orders</b></span>
+              <span class="text-success ms-2"><B>In stock</B></span>
+            </div>
+  
+            <div class="mb-3">
+              <span class="h5"><b>Price</b>: {{productData.price}}</span>
+              <!-- <span class="text-muted">/per box</span> -->
+            </div>
+  
+            <p>
+              <b>description</b> : {{productData.description}}
+            </p>
+  
+           
+  
+            <hr />
+  
+            <div class="row mb-4">
+             
+              <!-- col.// -->
+              <div class="col-md-4 col-6 mb-3">
+
+
+                <label class="mb-2 d-block" *ngIf="!pasProduit"><b>Quantity</b></label>
+
+                <div class="input-group mb-3" style="width: 170px;" *ngIf="!pasProduit">
+
+                  <button (click)="handleQuantity('min')" class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  
+                  <input type="text" class="form-control text-center border border-secondary" value="{{productQuantity}}" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+                  
+                  <button (click)="handleQuantity('plus')" class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+                    <i class="fas fa-plus"></i>
+                  </button>
+
+
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div *ngIf="!pasProduit">
+
+              <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
+       
+             
+              <button *ngIf="!removeCart  " class="btn btn-primary shadow-0" (click)="addToCart()">Add to Cart</button>
+             
+           
+          
+             <button *ngIf="removeCart" class="form-button" (click)=" removeToCart(productData.id)">Remove to Cart</button>
+          
+
+            </div>
+        
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+  <!-- content -->
+  <!-- <app-footer   ></app-footer> -->

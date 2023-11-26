@@ -1,0 +1,81 @@
+
+ 
+
+<div class="user-auth" style="margin-left: 20%;">
+
+  <div *ngIf="!showLogin"  class="sign-up" style="background-color: beige; width: 320px;">
+   <h1> Signup</h1>
+   <form #sellerSignUp="ngForm" class="common-form"  (ngSubmit)="signUp(sellerSignUp.value)">
+    <input
+    type="text"
+    class="form-control"
+    placeholder="Enter Name"
+    name="name"
+    ngModel
+    required
+  />
+  <BR>
+  <input
+  type="text"
+  class="form-control"
+  placeholder="Enter Email"
+  name="email"
+  ngModel
+  required
+/>
+<BR>
+
+  <input
+  type="password"
+  class="form-control"
+  placeholder="Enter Password"
+  name="password"
+  ngModel
+  required
+/>
+
+<BR>
+
+   <button class="btn btn-primary" [disabled]="sellerSignUp.invalid" >Sign Up</button>
+   <p>Already Have Account ? <a (click)="openLogin()" style="color: red;">Click Here</a></p>
+   </form>
+  </div>
+ 
+  
+  <div *ngIf="showLogin"  class="login" style="background-color: beige; width: 320px;">
+   <h1> Login</h1>
+   <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)"  class="common-form">
+     <p class="error-p">{{authError}}</p>
+     <input
+       type="text"
+       class="form-input"
+       name="email"
+       placeholder="Enter  Email"
+       ngModel
+       email
+       #email="ngModel"
+       required
+     />
+
+ 
+
+     <p class="invalid-input"><span *ngIf="email.invalid && email.touched " >Please enter valid input</span></p>
+     <input
+     type="password"
+     class="form-input"
+     name="password"
+     placeholder="Enter  Password"
+     ngModel
+     minlength="2"
+     maxlength="20"
+     #password="ngModel"
+     required
+   />
+   <p class="invalid-input"><span *ngIf="password.invalid && password.touched " >Please enter valid input</span></p>
+   <button class="btn btn-primary" [disabled]="sellerLogin.invalid"  >Login</button>
+   <p>Want to Create Account ? <a (click)="openSignUp()" style="color: red;">Click Here</a></p>
+   </form>
+  </div>
+ </div>
+  
+ <app-footer></app-footer>

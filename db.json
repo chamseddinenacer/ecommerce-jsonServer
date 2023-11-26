@@ -1,0 +1,95 @@
+{
+  "seller": [
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "name": "iphone 11",
+      "price": 1234,
+      "quantity": "1",
+      "category": "Phone",
+      "color": "Black",
+      "description": "Ecran : Liquid Retina HD 6.1 avec technologie IPS Résolution : 1792 x 828 pixels",
+      "image": "https://mk-media.mytek.tn/media/catalog/product/cache/8be3f98b14227a82112b46963246dfe1/i/p/iph-11-64-black_2.jpg",
+      "id": 1,
+      "stock": 9
+    },
+    {
+      "name": "Pc portable ACER",
+      "price": "659 ",
+      "category": "PC",
+      "color": "Black",
+      "description": "Système d'exploitation : FreeDos - Processeur : Intel Core i3-1005G1",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwpFxW_hGVZaFWlHzuByA5C1JtWkz50M3x3SaD37wku2GBxe4zflyCSb-DTcnh-9ZDAk&usqp=CAU",
+      "id": 2,
+      "stock": 0,
+      "quantity": 2
+    },
+    {
+      "name": "Samsung Galaxy A03 4go 128go  ",
+      "price": "459 ",
+      "category": "Phone",
+      "color": "Rouge",
+      "description": "Le Samsung Galaxy A03 épaulé aussi d'un processeur octa-core accompagné de 4go de RAM et 128go capacité de stockage extensible via micro SD",
+      "image": "https://tunisiatech.tn/9002-medium_default/samsung-galaxy-a03-4go-128go-rouge.webp",
+      "id": 3,
+      "stock": 7,
+      "quantity": 3
+    },
+    {
+      "name": "Smartphone iTel A58 Lite",
+      "price": "249  ",
+      "category": "Phone",
+      "color": "Black",
+      "description": "iTel A58 Lite à bas prix smartphone Tunisie et avec garantie officielle  ",
+      "image": "https://tunisiatech.tn/8541-medium_default/smartphone-itel-a58-lite.webp",
+      "id": 4,
+      "stock": 14,
+      "quantity": 2
+    },
+    {
+      "name": "Samsung Galaxy A03 Core 2go 32go ",
+      "price": "339  ",
+      "category": "Phone",
+      "color": "Bronze",
+      "description": "Le nouveau smartphone Samsung Galaxy A03 Core disponible avec deux couleurs Noir et Bleu chez Tunisiatech au meilleur prix smartphone en Tunisie et un design fin et léger pour une mise en main confortable , il est doté d'un écran Infinity-V de 6,5 pouces avec résolution HD+ 720*1600pixels qui offre un contenu clair, net et bien détaillé.  ",
+      "image": "https://tunisiatech.tn/9641-medium_default/samsung-galaxy-a03-core-bronze.webp",
+      "id": 5,
+      "stock": 11
+    },
+    {
+      "name": "Evertek M20 1go-16go",
+      "price": "269  ",
+      "category": "Phone",
+      "color": "Black",
+      "description": "Evertek M20 Lite à bas prix smartphone Tunisie et avec garantie officielle  ",
+      "image": "https://tunisiatech.tn/6825-medium_default/evertek-m20-1go-16go.webp",
+      "id": 6,
+      "stock": 19
+    }
+  ],
+  "users": [
+    {
+      "name": "marwa",
+      "email": "marwa@gmail.com",
+      "password": "marwa",
+      "id": 1
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "email": "marwa@gmail.com",
+      "address": "gabes",
+      "contact": "gabes gebes",
+      "totalPrice": 1477,
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}
